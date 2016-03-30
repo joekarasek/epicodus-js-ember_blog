@@ -1,3 +1,9 @@
-<h2 id="title">Welcome to Ember</h2>
+<div class='navBar'>
+  {{#link-to 'index'}}<h1>Funguy Blog</h1>{{/link-to}}
+  <div class='navBar__links'>
+    {{#link-to 'about'}}<p>About</p>{{/link-to}}
+    {{#link-to 'contact'}}<p>Contact</p>{{/link-to}}
+  </div>
+</div>
 
 {{outlet}}
