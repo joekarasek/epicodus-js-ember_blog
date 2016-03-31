@@ -2,8 +2,8 @@ import Ember from 'ember';
 
 export default Ember.Component.extend({
   actions: {
-    debug() {
-      debugger;
+    deleteComment(comment) {
+      this.sendAction('deleteComment', comment);
     }
   }
 });
