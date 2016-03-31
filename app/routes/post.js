@@ -23,7 +23,6 @@ export default Ember.Route.extend({
     save(params) {
       var newComment = this.store.createRecord('comment', params);
       var post = params.post;
-      debugger;
       post.get('comments').addObject(newComment);
       newComment.save().then(function() {
         return post.save();
@@ -33,8 +32,18 @@ export default Ember.Route.extend({
     deleteComment(comment) {
       var post = comment.get('post');
       comment.destroyRecord().then(function() {
-        return post.save();
+        return post.save;
       });
+      this.transitionTo('post');
+    },
+    updateComment(params, comment) {
+      var post = comment.get('post');
+      Object.keys(params).forEach(function(key) {
+        if(params[key]!=="") {
+          comment.set(key,params[key]);
+        }
+      });
+      comment.save();
       this.transitionTo('post');
     }
   }
