@@ -1,10 +1,15 @@
-<div class='navBar'>
-  {{#link-to 'index'}}<h1>Funguy Blog</h1>{{/link-to}}
-  <div class='navBar__links'>
-    {{#link-to 'about'}}<p>About</p>{{/link-to}}
-    {{#link-to 'contact'}}<p>Contact</p>{{/link-to}}
-    {{#link-to 'newpost'}}<p>New Post</p>{{/link-to}}
+<div class="container">
+  <div class='navBar'>
+    <div class="navBar__header">
+      {{#link-to 'index'}}<h1>Funguy Blog</h1>{{/link-to}}
+    </div>
+    <div class='navBar__links'>
+      {{#link-to 'about'}}<p>About</p>{{/link-to}}
+      {{#link-to 'contact'}}<p>Contact</p>{{/link-to}}
+      {{#link-to 'newpost'}}<p>New Post</p>{{/link-to}}
+    </div>
   </div>
-</div>
 
-{{outlet}}
+  {{outlet}}
+
+</div>
