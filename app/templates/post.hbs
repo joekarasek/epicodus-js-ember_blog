@@ -5,4 +5,5 @@
 <button {{action 'delete' model}}>Delete</button>
 {{post-edit post=model edit="edit"}}
 
-{{comment-list}}
+{{create-comment post=model submitCommment="save"}}
+{{comment-list comments=model.comments}}
